@@ -1,11 +1,9 @@
 import os
 from flask import Flask
-def test():
-    print('test')
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    test = 'Hello World!'
+    test = 1+1
     return test
