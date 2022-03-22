@@ -1,9 +1,9 @@
 import os
 from flask import Flask
-print('hello2')
-app = Flask(__name__)
+def test():
+    print('test')
 
-print('hello')
+app = Flask(__name__)
 
 @app.route('/')
 def hello():
