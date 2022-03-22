@@ -8,5 +8,7 @@ def hello():
     test = 1+1
     return render_template('output.html', entry=output)
 
-test = def test():
-          print('Hello World!')
+def test():
+    return 'Hello World!'
+    
+test = test()
