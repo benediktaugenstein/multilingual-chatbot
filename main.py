@@ -8,5 +8,5 @@ def hello():
     a = int(1)
     b = int(2)
     c = a + b
-    test = 'Hello'
+    test = str(c)
     return test
