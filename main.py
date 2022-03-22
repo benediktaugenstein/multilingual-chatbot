@@ -9,4 +9,5 @@ app = Flask(__name__)
 def hello():
     test = 0
     test += 1
-    return test
+    print(test)
+    return 'test'
