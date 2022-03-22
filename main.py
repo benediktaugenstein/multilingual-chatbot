@@ -8,7 +8,4 @@ from flask import Flask, render_template
     #test = 1+1
     #return render_template('output.html', entry=output)
 
-def test():
-    return 'Hello World!'
-    
-test = test()
+print('hello')
