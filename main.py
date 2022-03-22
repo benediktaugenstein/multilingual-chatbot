@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/output')
 def hello():
-    a = int(input(“Enter first number:”))
-    b = int(input(“Enter second number:”))
+    a = int(1)
+    b = int(2)
     c = a + b
     return 'Hello'
