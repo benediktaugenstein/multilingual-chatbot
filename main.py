@@ -6,4 +6,4 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     test = 1 + 1
-    return test
+    print(test)
