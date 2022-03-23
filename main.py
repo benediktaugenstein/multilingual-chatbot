@@ -6,7 +6,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 def helper(x):
-    return x+1
+    print(x)
 
 @app.route('/')
 def my_form():
@@ -14,6 +14,7 @@ def my_form():
 
 @app.route('/', methods=['POST'])
 def output():
+    helper('hallo')
     text = request.form['text']
     processed_text = text.upper()
     result = processed_text
