@@ -10,7 +10,7 @@ def helper(x):
 
 @app.route('/')
 def hello():
-    test = helper(1)
+    test = input('Hier input')
     #print('Hello', file=sys.stdout)
     test2 = str(test)
     return test2
