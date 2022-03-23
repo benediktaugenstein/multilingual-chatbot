@@ -12,6 +12,6 @@ def hello():
     b = int(2)
     c = a + b
     y = str(x)
-    print('Hello', file=sys.stderr)
+    print('Hello', file=sys.stdout)
     test = str(c)
     return y
