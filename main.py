@@ -11,5 +11,6 @@ def hello():
     b = int(2)
     c = a + b
     y = str(x)
+    print('Hello')
     test = str(c)
     return y
