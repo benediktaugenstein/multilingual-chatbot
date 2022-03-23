@@ -14,12 +14,7 @@ app = Flask(__name__)
 y = 'test'
 
 def helper():
-    if not 'counter' in session:
-        session['counter'] = 0
-    session['counter'] += 1
-    test_var_int = session['counter']
-    test_var = str(test_var_int)
-    return test_var
+    return 'Hello'
 
 @app.route('/')
 def my_form():
@@ -28,10 +23,17 @@ def my_form():
 @app.route('/', methods=['POST'])
 #@app.route('/')
 def output():
+    
+    if not 'counter' in session:
+        session['counter'] = 0
+    session['counter'] += 1
+    test_var_int = session['counter']
+    test_var = str(test_var_int)
+    
     text = request.form['text']
     processed_text = helper2(text)
-    more_text = helper()
-    result = more_text + processed_text
+    
+    result = test_var + processed_text
     return render_template("input.html",result = result)
 
 if __name__ == '__main__':
