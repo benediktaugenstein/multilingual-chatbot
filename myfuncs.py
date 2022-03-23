@@ -1,4 +1,5 @@
 def helper2(x):
-  x = x.upper() + 'lalala'
+  t += 1
+  x = x.upper() + 'lalala' + str(t)
   return x
  
