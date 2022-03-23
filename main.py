@@ -16,4 +16,5 @@ def my_form():
 def output():
     text = request.form['text']
     processed_text = text.upper()
-    return processed_text
+    result = processed_text
+    return render_template("input.html",result = result)
