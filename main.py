@@ -12,7 +12,7 @@ y = 'test'
 def helper():
     #test_var = test_var + 1
     #test_var_string = str(test_var)
-    return test_var_string
+    return test_var
 
 @app.route('/')
 def my_form():
