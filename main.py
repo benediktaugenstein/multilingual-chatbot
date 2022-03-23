@@ -10,8 +10,9 @@ test_var = '0'
 y = 'test'
 
 def helper():
-    #test_var = test_var + 1
-    #test_var_string = str(test_var)
+    test_var_float = float(test_var)
+    test_var_float += 1
+    test_var = str(test_var_float)
     return test_var
 
 @app.route('/')
