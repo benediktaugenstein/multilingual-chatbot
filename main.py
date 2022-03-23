@@ -9,7 +9,7 @@ def helper():
     #x=x.upper()
     return 'x'
 
-#@app.route('/')
+@app.route('/')
 def my_form():
     return render_template('input.html')
 
