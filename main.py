@@ -1,4 +1,5 @@
 import os
+import sys
 import numpy as np
 from flask import Flask, render_template
 
@@ -11,6 +12,6 @@ def hello():
     b = int(2)
     c = a + b
     y = str(x)
-    print('Hello')
+    print('Hello', file=sys.stderr)
     test = str(c)
     return y
