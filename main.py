@@ -24,5 +24,5 @@ def output():
     text = request.form['text']
     processed_text = helper2(text)
     more_text = helper()
-    result = processed_text
+    result = more_text
     return render_template("input.html",result = result)
