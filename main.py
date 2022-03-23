@@ -10,6 +10,6 @@ def hello():
     a = int(1)
     b = int(2)
     c = a + b
-    #y = str(x)
+    y = str(x)
     test = str(c)
-    return test
+    return y
