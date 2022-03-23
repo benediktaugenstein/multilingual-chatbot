@@ -6,12 +6,12 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-test_var = 0
+test_var = '0'
 y = 'test'
 
 def helper():
-    test_var = test_var + 1
-    test_var_string = str(test_var)
+    #test_var = test_var + 1
+    #test_var_string = str(test_var)
     return test_var_string
 
 @app.route('/')
