@@ -6,12 +6,14 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-t = 0
+test_var = 0
 y = 'test'
 
-def helper(x):
-    x=x.upper() + y
-    return x
+def helper():
+    global test_var
+    test_var = test_var + 1
+    test_var_string = str(test_var)
+    return test_var_string
 
 @app.route('/')
 def my_form():
@@ -22,5 +24,6 @@ def my_form():
 def output():
     text = request.form['text']
     processed_text = helper2(text)
-    result = processed_text
+    more_text = helper()
+    result = processed_text + more text
     return render_template("input.html",result = result)
