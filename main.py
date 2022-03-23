@@ -3,13 +3,13 @@ import sys
 import numpy as np
 from myfuncs import helper2
 from flask import Flask, render_template, request, session
-from flask.ext.session import Session
+#from flask.ext.session import Session
 
 app = Flask(__name__)
 
-SESSION_TYPE = 'filesystem'
-app.config.from_object(__name__)
-Session(app)
+#SESSION_TYPE = 'filesystem'
+#app.config.from_object(__name__)
+#Session(app)
 
 y = 'test'
 
