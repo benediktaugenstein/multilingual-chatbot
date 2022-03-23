@@ -6,6 +6,7 @@ from flask import Flask, render_template, request, session
 #from flask.ext.session import Session
 
 app = Flask(__name__)
+app.secret_key='test'
 
 #SESSION_TYPE = 'filesystem'
 #app.config.from_object(__name__)
@@ -18,15 +19,15 @@ def helper():
 
 @app.route('/')
 def my_form():
-    if 'counter' in session:
-        session['counter'] += 1
-    else:
-        session['counter'] = 1
     return render_template('input.html')
 
 @app.route('/', methods=['POST'])
 #@app.route('/')
 def output():
+    if 'counter' in session:
+        session['counter'] += 1
+    else:
+        session['counter'] = 1
     test_var_int = session['counter']
     test_var = str(test_var_int)
     text = request.form['text']
