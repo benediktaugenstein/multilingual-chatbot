@@ -17,7 +17,7 @@ def output():
     helper('hallo')
     text = request.form['text']
     processed_text = text.upper()
-    if result in locals():
+    if result is not None:
         pass
     else:
         result = ''
