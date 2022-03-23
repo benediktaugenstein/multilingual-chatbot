@@ -6,7 +6,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 def helper():
-    print('hello')
+    return 'Hello'
 
 #@app.route('/')
 #def my_form():
