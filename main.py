@@ -30,4 +30,4 @@ def output():
     return render_template("input.html",result = result)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(threaded=True)
