@@ -1,12 +1,11 @@
 import os
 import sys
 import numpy as np
-from myfuncs import helper2
+from myfuncs import helper2, counter
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-t = 0
 y = 'test'
 
 def helper(x):
@@ -21,6 +20,6 @@ def my_form():
 #@app.route('/')
 def output():
     text = request.form['text']
-    processed_text = helper2(text)
+    processed_text = helper2(text) + counter
     result = processed_text
     return render_template("input.html",result = result)
