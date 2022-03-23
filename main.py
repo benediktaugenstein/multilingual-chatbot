@@ -12,4 +12,4 @@ def hello():
     c = a + b
     y = str(x)
     test = str(c)
-    return y
+    return x
