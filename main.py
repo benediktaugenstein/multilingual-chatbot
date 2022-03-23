@@ -6,7 +6,8 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-y='test'
+t = 0
+y = 'test'
 
 def helper(x):
     x=x.upper() + y
