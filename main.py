@@ -11,5 +11,6 @@ def helper(x):
 @app.route('/')
 def hello():
     test = helper(1)
-    print('Hello', file=sys.stdout)
-    return str(x)
+    #print('Hello', file=sys.stdout)
+    test2 = str(test)
+    return test2
