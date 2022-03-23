@@ -42,5 +42,5 @@ def output():
     result = more_text + processed_text
     return render_template("input.html",result = result)
 
-if __name__ == '__main__':
-    app.run(threaded=False)
+#if __name__ == '__main__':
+    #app.run(threaded=False)
