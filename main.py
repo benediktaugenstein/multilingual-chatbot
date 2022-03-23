@@ -1,11 +1,10 @@
 import os
 import sys
 import numpy as np
-from myfuncs import helper2
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-
+from myfuncs import helper2
 y='test'
 
 def helper(x):
