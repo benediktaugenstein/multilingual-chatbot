@@ -2,32 +2,23 @@ import os
 import sys
 import numpy as np
 from myfuncs import helper2
-from flask import Flask, render_template, request
-from flask_caching import Cache
-
-config = {
-    "DEBUG": True,          # some Flask specific configs
-    "CACHE_TYPE": "SimpleCache",  # Flask-Caching related configs
-    "CACHE_DEFAULT_TIMEOUT": 300
-}
+from flask import Flask, render_template, request, session
+from flask_session import Session
 
 app = Flask(__name__)
 
-app.config.from_mapping(config)
-cache = Cache(app)
-
-test_var = '0'
-cache.set("my_value", test_var)
+SESSION_TYPE = 'filesystem'
+app.config.from_object(__name__)
+Session(app)
 
 y = 'test'
 
 def helper():
-    my_value = cache.get("my_value")
-    test_var_float = int(my_value)
-    test_var_float += 1
-    my_value = str(test_var_float)
-    cache.set("my_value", my_value)
-    return my_value
+    if not "counter" in session:
+        session["counter"] = 0
+    session["counter"] += 1
+    test_var = str(session["counter"])
+    return test_var
 
 @app.route('/')
 def my_form():
