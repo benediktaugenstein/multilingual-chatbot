@@ -11,14 +11,14 @@ app = Flask(__name__)
 #app.config.from_object(__name__)
 #Session(app)
 
-session["counter"] = '0'
 y = 'test'
 
 def helper():
-    test = int(session["counter"])
-    test = test + 1
-    session["counter"] = str(test)
-    test_var = str(test)
+    if not 'counter' in session:
+        session['counter'] = 0
+    session['counter'] += 1
+    test_var_int = session['counter']
+    test_var = str(test_var_int)
     return test_var
 
 @app.route('/')
