@@ -2,19 +2,26 @@ import os
 import sys
 import numpy as np
 from myfuncs import helper2
+from flask_caching import Cache
+cache = Cache()
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+cache.init_app(app=app, config={"CACHE_TYPE": "filesystem",'CACHE_DIR': Path('/tmp')})
+
 test_var = '0'
+cache.set("my_value", test_var)
+
 y = 'test'
 
 def helper():
-    global test_var
-    test_var_float = int(test_var)
+    my_value = cache.get("my_value")
+    test_var_float = int(my_value)
     test_var_float += 1
-    test_var = str(test_var_float)
-    return test_var
+    my_value = str(test_var_float)
+    cache.set("my_value", my_value)
+    return my_value
 
 @app.route('/')
 def my_form():
