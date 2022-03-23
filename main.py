@@ -3,7 +3,7 @@ import sys
 import numpy as np
 from myfuncs import helper2
 from flask import Flask, render_template, request, session
-from flask_session import Session
+from flask.ext.session import Session
 
 app = Flask(__name__)
 
