@@ -18,7 +18,7 @@ def output():
     text = request.form['text']
     processed_text = text.upper()
     if result in locals():
-        break
+        pass
     else:
         result = ''
     result = result + processed_text
