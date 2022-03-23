@@ -5,8 +5,10 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+y='test'
+
 def helper(x):
-    x=x.upper()
+    x=x.upper() + y
     return x
 
 @app.route('/')
