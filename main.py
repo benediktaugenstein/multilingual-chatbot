@@ -10,6 +10,7 @@ test_var = '0'
 y = 'test'
 
 def helper():
+    global test_var
     test_var_float = float(test_var)
     test_var_float += 1
     test_var = str(test_var_float)
