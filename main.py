@@ -3,18 +3,20 @@ import sys
 import numpy as np
 from myfuncs import helper2
 from flask import Flask, render_template, request
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 
-test_var = '0'
+#test_var = '0'
 y = 'test'
 
 def helper():
-    global test_var
-    test_var_float = int(test_var)
-    test_var_float += 1
-    test_var = str(test_var_float)
-    return test_var
+    #global test_var
+    #test_var_float = int(test_var)
+    #test_var_float += 1
+    #test_var = str(test_var_float)
+    return f'{os.getenv("TEST_VAR")}'
 
 @app.route('/')
 def my_form():
