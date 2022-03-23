@@ -8,7 +8,7 @@ app = Flask(__name__)
 def helper(x):
     return x+1
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/output', methods=['GET', 'POST'])
 def output():
     if request.method == "POST":
        inp = request.form.get("inp") # name="inp" in html
