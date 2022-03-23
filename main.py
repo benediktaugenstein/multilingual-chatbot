@@ -11,11 +11,10 @@ app = Flask(__name__)
 #app.config.from_object(__name__)
 #Session(app)
 
+session["counter"] = 0
 y = 'test'
 
 def helper():
-    if not "counter" in session:
-        session["counter"] = 0
     session["counter"] += 1
     test_var = str(session["counter"])
     return test_var
