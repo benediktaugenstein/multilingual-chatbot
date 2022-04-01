@@ -1,21 +1,20 @@
 import os
 import sys
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from datetime import datetime, timezone, timedelta
+from sklearn.preprocessing import LabelBinarizer
+import pandas as pd
 import numpy as np
-from myfuncs import helper2
+from myfuncs import *
 from flask import Flask, render_template, request, session
-#from flask.ext.session import Session
 
 app = Flask(__name__)
 app.secret_key='test'
 
-#SESSION_TYPE = 'filesystem'
-#app.config.from_object(__name__)
-#Session(app)
-
 y = 'test'
-
-def helper():
-    return 'Hello'
 
 @app.route('/')
 def my_form():
@@ -24,15 +23,20 @@ def my_form():
 @app.route('/', methods=['POST'])
 #@app.route('/')
 def output():
+    """
     if 'counter' in session:
         session['counter'] += 1
     else:
         session['counter'] = 1
+    
     test_var_int = session['counter']
     test_var = str(test_var_int)
     text = request.form['text']
     processed_text = helper2(text)
     result = test_var + processed_text
+    """
+    text = request.form['text']
+    result = new_input(text)
     return render_template("input.html",result = result)
 
 #if __name__ == '__main__':
