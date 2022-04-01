@@ -1,7 +1,7 @@
 import os
 import sys
-#import tensorflow as tf
-#from tensorflow import keras
+import tensorflow as tf
+from tensorflow import keras
 #from tensorflow.keras.preprocessing.text import Tokenizer
 #from tensorflow.keras.preprocessing.sequence import pad_sequences
 from datetime import datetime, timezone, timedelta
@@ -13,7 +13,18 @@ from flask import Flask, render_template, request, session
 app = Flask(__name__)
 app.secret_key='test'
 
-from datapreparation import *
+model = keras.models.load_model('/model/general')
+model2 = keras.models.load_model('/model/feeling')
+
+#link_general = '/data/general.csv'
+#link_feeling = '/data/feeling.csv'
+models = [model, model2]
+datasets = [link_general, link_feeling]
+tokenizers = []
+word_indices = []
+sequences_array = []
+lengths_input = []
+labels_transformed_array = []
 
 @app.route('/')
 def my_form():
