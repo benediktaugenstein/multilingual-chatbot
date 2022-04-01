@@ -3,7 +3,7 @@ def helper2(x):
   return x
 
 def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
-  import datetime
+  from datetime import datetime, timezone, timedelta
   from tensorflow.keras.preprocessing.sequence import pad_sequences
   #input_initial = input('input here: ')
   #for word in inp.split():
