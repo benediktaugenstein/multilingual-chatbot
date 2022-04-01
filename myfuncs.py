@@ -3,6 +3,7 @@ def helper2(x):
   return x
 
 def new_input(input_initial, tokenizers, lengths_input, models, ohe):
+  from tensorflow.keras.preprocessing.sequence import pad_sequences
   #input_initial = input('input here: ')
   #for word in inp.split():
     #if word.lower() in contractions:
@@ -13,7 +14,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe):
       #input_initial = input_initial.replace(key, value)
   inp = [input_initial]
   inp = tokenizers[0].texts_to_sequences(inp)
-  #inp = pad_sequences(inp, maxlen=lengths_input[0], padding='post', truncating='post')
+  inp = pad_sequences(inp, padding='post', truncating='post')
   #prediction = models[0].predict(inp)
   """
   #print('Name', 'Time', 'Greeting')
