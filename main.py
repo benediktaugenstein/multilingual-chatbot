@@ -64,7 +64,7 @@ def my_form():
 @app.route('/', methods=['POST'])
 #@app.route('/')
 def output():
-
+    tokenizers1 = tokenizers
     """
     if 'counter' in session:
         session['counter'] += 1
@@ -78,7 +78,7 @@ def output():
     result = test_var + processed_text
     """
     text = request.form['text']
-    result = new_input(text, tokenizers, lengths_input, models, ohe)
+    result = new_input(text, tokenizers1, lengths_input, models, ohe)
     #var = text + test
     var = str(result)
     result = var
