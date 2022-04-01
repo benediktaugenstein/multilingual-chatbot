@@ -15,7 +15,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe):
   inp = [input_initial]
   inp = tokenizers[0].texts_to_sequences(inp)
   inp = pad_sequences(inp, maxlen=lengths_input[0], padding='post', truncating='post')
-  #prediction = models[0].predict(inp)
+  prediction = models[0].predict(inp)
   """
   #print('Name', 'Time', 'Greeting')
   #print(prediction)
