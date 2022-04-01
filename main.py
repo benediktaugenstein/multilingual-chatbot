@@ -23,7 +23,7 @@ word_indices = []
 sequences_array = []
 lengths_input = []
 labels_transformed_array = []
-"""
+
 for i, model in enumerate(models):
   data = pd.read_csv(datasets[i])
 
@@ -52,7 +52,7 @@ for i, model in enumerate(models):
     ohe2 = LabelBinarizer()
     labels_transformed_feeling = ohe2.fit_transform(labels)
   #len_output = len(labels_transformed[0])
-"""
+
 app.secret_key='test'
 
 @app.route('/')
