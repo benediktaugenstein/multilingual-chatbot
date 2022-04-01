@@ -1,6 +1,6 @@
 gunicorn
-datetime
 flask
 tensorflow-cpu
+datetime
 scikit-learn
 pandas
