@@ -7,7 +7,6 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from datetime import datetime, timezone, timedelta
 from sklearn.preprocessing import LabelBinarizer
 import pandas as pd
-import numpy as np
 from myfuncs import *
 from flask import Flask, render_template, request, session
 
