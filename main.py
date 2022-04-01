@@ -79,7 +79,8 @@ def output():
     """
     text = request.form['text']
     #result = new_input(text, tokenizers, lengths_input, models, ohe)
-    result = text + test
+    var = text + test
+    result = str(var)
     return render_template("input.html",result = result)
 
 #if __name__ == '__main__':
