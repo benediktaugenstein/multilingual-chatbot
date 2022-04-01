@@ -77,7 +77,7 @@ def output():
     result = test_var + processed_text
     """
     text = request.form['text']
-    result = new_input(text, tokenizers, lengths_input, models, ohe)
+    result = new_input(text, tokenizers, lengths_input, models, ohe, ohe2)
     #var = text + test
     var = str(result)
     result = var
