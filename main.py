@@ -55,6 +55,8 @@ for i, model in enumerate(models):
 
 app.secret_key='test'
 
+test = 'test123'
+
 @app.route('/')
 def my_form():
     return render_template('input.html')
@@ -76,7 +78,8 @@ def output():
     result = test_var + processed_text
     """
     text = request.form['text']
-    result = new_input(text, tokenizers, lengths_input, models, ohe)
+    #result = new_input(text, tokenizers, lengths_input, models, ohe)
+    result = text + test
     return render_template("input.html",result = result)
 
 #if __name__ == '__main__':
