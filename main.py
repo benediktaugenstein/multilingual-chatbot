@@ -1,9 +1,9 @@
 import os
 import sys
-import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+#import tensorflow as tf
+#from tensorflow import keras
+#from tensorflow.keras.preprocessing.text import Tokenizer
+#from tensorflow.keras.preprocessing.sequence import pad_sequences
 from datetime import datetime, timezone, timedelta
 #from sklearn.preprocessing import LabelBinarizer
 import pandas as pd
@@ -13,7 +13,7 @@ from flask import Flask, render_template, request, session
 app = Flask(__name__)
 app.secret_key='test'
 
-from datapreparation import *
+#from datapreparation import *
 
 @app.route('/')
 def my_form():
