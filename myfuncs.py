@@ -9,7 +9,7 @@ def new_input(input_initial):
   #link_general = '/data/general.csv'
   #link_feeling = '/data/feeling.csv'
   models = [model, model2]
-  datasets = [link_general, link_feeling]
+  #datasets = [link_general, link_feeling]
   tokenizers = []
   word_indices = []
   sequences_array = []
