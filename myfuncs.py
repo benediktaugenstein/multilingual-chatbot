@@ -2,7 +2,7 @@ def helper2(x):
   x = x.upper() + 'lalala'
   return x
 
-def new_input(input_initial):
+def new_input(input_initial, tokenizers, lengths_input, models, ohe):
   #input_initial = input('input here: ')
   #for word in inp.split():
     #if word.lower() in contractions:
