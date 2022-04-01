@@ -1,4 +1,5 @@
 gunicorn
 flask
 tensorflow-cpu
+scikit-learn
 pandas
