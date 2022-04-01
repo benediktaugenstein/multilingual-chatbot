@@ -1,3 +1,7 @@
 numpy
 gunicorn
 flask
+tensorflow
+sklearn
+datetime
+pandas
