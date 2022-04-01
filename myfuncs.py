@@ -11,6 +11,7 @@ def new_input(input_initial):
     #search = key + ' '
     #if search in input_initial:
       #input_initial = input_initial.replace(key, value)
+  """
   input_initial = [input_initial]
   inp = tokenizers[0].texts_to_sequences(input_initial)
   inp = pad_sequences(inp, maxlen=lengths_input[0], padding='post', truncating='post')
@@ -26,7 +27,8 @@ def new_input(input_initial):
   prediction_inverse_transformed = ohe.inverse_transform(prediction)
   #print('Predicted category is: ', prediction_inverse_transformed[0])
   var = prediction_inverse_transformed[0]
-  #prediction = 'hello'
+  """
+  prediction = 'hello'
   var_string = str(var)
   return var_string
   
