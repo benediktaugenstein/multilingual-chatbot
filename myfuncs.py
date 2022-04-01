@@ -15,6 +15,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe):
   inp = tokenizers[0].texts_to_sequences(inp)
   inp = pad_sequences(inp, maxlen=lengths_input[0], padding='post', truncating='post')
   prediction = models[0].predict(inp)
+  """
   #print('Name', 'Time', 'Greeting')
   #print(prediction)
   max_pred = max(prediction[0])
@@ -28,8 +29,9 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe):
   prediction_inverse_transformed = ohe.inverse_transform(prediction)
   #print('Predicted category is: ', prediction_inverse_transformed[0])
   var = prediction_inverse_transformed[0]
-  #prediction = 'hello'
-  #var = prediction
+  """
+  prediction = 'hello'
+  var = prediction
   var_string = str(var)
   return var_string
   
