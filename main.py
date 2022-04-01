@@ -12,7 +12,7 @@ from flask import Flask, render_template, request, session
 
 app = Flask(__name__)
 app.secret_key='test'
-
+"""
 model = keras.models.load_model('/model/general')
 model2 = keras.models.load_model('/model/feeling')
 
@@ -25,7 +25,7 @@ word_indices = []
 sequences_array = []
 lengths_input = []
 labels_transformed_array = []
-
+"""
 @app.route('/')
 def my_form():
     return render_template('input.html')
