@@ -2,30 +2,17 @@ import os
 import sys
 import tensorflow as tf
 from tensorflow import keras
-#from tensorflow.keras.preprocessing.text import Tokenizer
-#from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 from datetime import datetime, timezone, timedelta
-#from sklearn.preprocessing import LabelBinarizer
+from sklearn.preprocessing import LabelBinarizer
 import pandas as pd
 from myfuncs import *
 from flask import Flask, render_template, request, session
 
 app = Flask(__name__)
 app.secret_key='test'
-"""
-model = keras.models.load_model('/model/general')
-model2 = keras.models.load_model('/model/feeling')
 
-#link_general = '/data/general.csv'
-#link_feeling = '/data/feeling.csv'
-models = [model, model2]
-datasets = [link_general, link_feeling]
-tokenizers = []
-word_indices = []
-sequences_array = []
-lengths_input = []
-labels_transformed_array = []
-"""
 @app.route('/')
 def my_form():
     return render_template('input.html')
