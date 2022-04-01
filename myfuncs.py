@@ -12,6 +12,7 @@ def new_input(input_initial):
     #if search in input_initial:
       #input_initial = input_initial.replace(key, value)
   prediction = 'hello'
+  var = prediction
   var_string = str(var)
   return var_string
   
