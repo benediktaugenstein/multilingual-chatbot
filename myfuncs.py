@@ -3,8 +3,8 @@ def helper2(x):
   return x
 
 def new_input(input_initial):
-  model = keras.models.load_model('/model/general')
-  model2 = keras.models.load_model('/model/feeling')
+  #model = keras.models.load_model('/model/general')
+  #model2 = keras.models.load_model('/model/feeling')
 
   #link_general = '/data/general.csv'
   #link_feeling = '/data/feeling.csv'
