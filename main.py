@@ -14,8 +14,8 @@ app = Flask(__name__)
 
 model = keras.models.load_model('model/general/general.h5')
 model2 = keras.models.load_model('model/feeling/feeling.h5')
-link_general = '/data/general.csv'
-link_feeling = '/data/feeling.csv'
+link_general = 'data/general.csv'
+link_feeling = 'data/feeling.csv'
 models = [model, model2]
 datasets = [link_general, link_feeling]
 tokenizers = []
