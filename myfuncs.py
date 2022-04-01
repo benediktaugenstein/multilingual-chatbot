@@ -14,7 +14,7 @@ def new_input(input_initial):
   #input_initial = [input_initial]
   #inp = tokenizers[0].texts_to_sequences(input_initial)
   #inp = pad_sequences(inp, maxlen=lengths_input[0], padding='post', truncating='post')
-  prediction = models[0].predict(input_initial)
+  #prediction = models[0].predict(input_initial)
   #max_pred = max(prediction[0])
   #for i, x in enumerate(prediction[0]):
     #if x == max_pred:
