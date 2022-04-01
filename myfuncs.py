@@ -57,7 +57,6 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
       output = 'I am happy that you are feeling well.'
     elif var == 'feel_person_bad':
       output = 'I am sorry to hear that.'
-    output = var
   elif var == 'Existence':
     output = 'I am an artificial intelligence and my name is Ben. I do not have feelings. Basically, I am just statistics. My purpose is to talk to you. How may I help you?'
   
