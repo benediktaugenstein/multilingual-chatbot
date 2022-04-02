@@ -351,4 +351,5 @@ def sub():
   "you ll ve": "you shall have / you will have",
   "you re": "you are",
   "you ve": "you have"
-}
+  }
+  return contractioins
