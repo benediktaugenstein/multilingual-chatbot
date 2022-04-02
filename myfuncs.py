@@ -30,7 +30,9 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   prediction_inverse_transformed = ohe.inverse_transform(prediction)
   #print('Predicted category is: ', prediction_inverse_transformed[0])
   var = prediction_inverse_transformed[0]
-  if var == 'Greeting':
+  if max_pred <= 0.3:
+    output = 'Sorry, I did not understand that.'
+  elif var == 'Greeting':
     output = 'Hello there'
   elif var == 'Name':
     output = 'My name is Ben, and yours?'
