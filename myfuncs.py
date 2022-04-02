@@ -68,6 +68,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   
   #prediction = 'hello'
   ##var = prediction
+  session['last_message'] = var
 
   #var_string_prep = str(output) + '<br>' + str(initial_input) + '<br>'
   var_string_prep = output
