@@ -5,7 +5,6 @@ def helper2(x):
 def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   from datetime import datetime, timezone, timedelta
   from tensorflow.keras.preprocessing.sequence import pad_sequences
-  from flask import session
   #input_initial = input('input here: ')
   #for word in inp.split():
     #if word.lower() in contractions:
