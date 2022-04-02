@@ -79,9 +79,9 @@ def output():
     text = request.form['text']
     result = new_input(text, tokenizers, lengths_input, models, ohe, ohe2)
     if 'fin_output' in session:
-      session['fin_output'] = 'Chatbot: ' + result + '<br>' + 'You: ' + text + '<br></br>' + session['fin_output']
+      session['fin_output'] = 'Chatbot: ' + text + '<br>' + 'You: ' + result + '<br></br>' + session['fin_output']
     else:
-      session['fin_output'] = 'Chatbot: ' + result + '<br>' + 'You: ' + text + '<br></br>' + '<br></br>'
+      session['fin_output'] = 'Chatbot: ' + text + '<br>' + 'You: ' + result + '<br></br>' + '<br></br>'
     #var = text + test
     var = session['fin_output']
     #var = result
