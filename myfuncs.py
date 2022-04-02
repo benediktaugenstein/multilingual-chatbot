@@ -5,14 +5,10 @@ def helper2(x):
 def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   from datetime import datetime, timezone, timedelta
   from tensorflow.keras.preprocessing.sequence import pad_sequences
-  #input_initial = input('input here: ')
-  #for word in inp.split():
-    #if word.lower() in contractions:
-      #inp = inp.replace(word, contractions[word.lower()])
-  #for key, value in contractions.items():
-    #search = key + ' '
-    #if search in input_initial:
-      #input_initial = input_initial.replace(key, value)
+  for key, value in contractions.items():
+    search = key + ' '
+    if search in input_initial:
+      input_initial = input_initial.replace(key, value)
   input_prep = [input_initial]
   inp = tokenizers[0].texts_to_sequences(input_prep)
   inp = pad_sequences(inp, maxlen=lengths_input[0], padding='post', truncating='post')
