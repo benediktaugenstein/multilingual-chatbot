@@ -3,6 +3,7 @@ def helper2(x):
   return x
 
 def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
+  from subs import sub
   from datetime import datetime, timezone, timedelta
   from tensorflow.keras.preprocessing.sequence import pad_sequences
   for key, value in contractions.items():
