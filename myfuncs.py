@@ -28,8 +28,10 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   prediction_inverse_transformed = ohe.inverse_transform(prediction)
   #print('Predicted category is: ', prediction_inverse_transformed[0])
   var = prediction_inverse_transformed[0]
-  if max_pred <= 0.3: #OR sum(inp[0]) == 0:
+  if max_pred <= 0.3:
     output = 'Sorry, I did not understand that.'
+  elif  sum(inp[0]) == 0:
+    output = 'Hello, my friend. Unfortunately, I did not really understand that.'
   elif var == 'Greeting':
     output = 'Hello there'
   elif var == 'Name':
