@@ -13,8 +13,8 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
     #search = key + ' '
     #if search in input_initial:
       #input_initial = input_initial.replace(key, value)
-  input_initial = [input_initial]
-  inp = tokenizers[0].texts_to_sequences(input_initial)
+  input_initial2 = [input_initial]
+  inp = tokenizers[0].texts_to_sequences(input_initial2)
   inp = pad_sequences(inp, maxlen=lengths_input[0], padding='post', truncating='post')
   prediction = models[0].predict(inp)
   
@@ -40,7 +40,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
     date = now.strftime("%Y-%m-%d")
     output = 'Currently, it is' + time + '\nThe date is: ' + date
   elif var =='Feeling':
-    inp_feel = tokenizers[1].texts_to_sequences(input_initial)
+    inp_feel = tokenizers[1].texts_to_sequences(input_initial2)
     inp_feel = pad_sequences(inp_feel, maxlen=lengths_input[1], padding='post', truncating='post')
     prediction = models[1].predict(inp_feel)
     max_pred = max(prediction[0])
@@ -62,7 +62,11 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   
   #prediction = 'hello'
   ##var = prediction
-  var_string = str(output)
+  if 'fin_output' in session:
+    session['fin_output'] = initial_input + '<br>' + output + '<br>' + session['fin_output']
+  else:
+    session['fin_output'] = initial_input + '<br>' + output
+  var_string = str(session['fin_output'])
   return var_string
   
  
