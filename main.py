@@ -79,9 +79,9 @@ def output():
     text = request.form['text']
     result = new_input(text, tokenizers, lengths_input, models, ohe, ohe2)
     if 'fin_output' in session:
-      session['fin_output'] = result + text + session['fin_output']
+      session['fin_output'] = result + '<br></br>' + text + '<br></br>' + session['fin_output']
     else:
-      session['fin_output'] = result + text
+      session['fin_output'] = result + '<br></br>' + text + '<br></br>'
     #var = text + test
     var = session['fin_output']
     #var = result
