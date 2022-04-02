@@ -352,4 +352,4 @@ def sub():
   "you re": "you are",
   "you ve": "you have"
   }
-  return contractioins
+  return contractions
