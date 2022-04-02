@@ -8,11 +8,9 @@ from datetime import datetime, timezone, timedelta
 from sklearn.preprocessing import LabelBinarizer
 import pandas as pd
 from myfuncs import *
-from subs import sub
 from flask import Flask, render_template, request, session
 
 app = Flask(__name__)
-sub()
 model = keras.models.load_model('model/general/general.h5')
 model2 = keras.models.load_model('model/feeling/feeling.h5')
 link_general = 'data/general.csv'
