@@ -1,6 +1,6 @@
 #@title Contractions
 def sub():
-contractions = {
+  contractions = {
   "ain't": "am not",
   "aren't": "are not",
   "can't": "cannot",
