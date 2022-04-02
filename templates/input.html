@@ -6,15 +6,17 @@
     </head>
 
     <body>
-     
+      
+      <div style="overflow:auto; height:250px; width:500px; display:flex; flex-direction:column-reverse;">
+        <p>{{ result|safe }}</p>
+      </div>
+             
       <form method="POST">
         <h2>Chatbot</h2>
         <input name="text">
         <input type="submit">
       </form>
-      <div style="overflow:auto; height:400px; width:500px; display:flex; flex-direction:column-reverse;">
-        <p>{{ result|safe }}</p>
-      </div
+      
     </body>
   
 </html>
