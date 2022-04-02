@@ -51,12 +51,16 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
         prediction[0][i]=0
     prediction_inverse_transformed = ohe2.inverse_transform(prediction)
     var = prediction_inverse_transformed[0]
-    if var == 'feel_HAL':
+    if max_pred <= 0.3:
+      output = 'Sorry, I did not understand that.'
+    elif var == 'feel_HAL':
       output = 'Im good, how about you?'
     elif var == 'feel_person_good':
       output = 'I am happy that you are feeling well.'
     elif var == 'feel_person_bad':
       output = 'I am sorry to hear that.'
+    elif var == 'feel_person_question':
+      output = 'I do not know. How do you feel?'
   elif var == 'Existence':
     output = 'I am an artificial intelligence and my name is Ben. I do not have feelings. Basically, I am just statistics. My purpose is to talk to you. How may I help you?'
   
