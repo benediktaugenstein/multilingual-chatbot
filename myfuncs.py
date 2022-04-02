@@ -63,11 +63,8 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   
   #prediction = 'hello'
   ##var = prediction
-  if 'fin_output' in session:
-    session['fin_output'] = initial_input + '<br>' + output + '<br>' + session['fin_output']
-  else:
-    session['fin_output'] = initial_input + '<br>' + output
-  var_string_prep = session['fin_output']
+
+  var_string_prep = output + '<br>' + initial_input + '<br>'
   var_string = str(var_string_prep)
   return var_string
   
