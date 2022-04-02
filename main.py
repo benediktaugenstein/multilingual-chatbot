@@ -78,9 +78,13 @@ def output():
     """
     text = request.form['text']
     result = new_input(text, tokenizers, lengths_input, models, ohe, ohe2)
+    if 'fin_output' in session:
+      session['fin_output'] = result + session['fin_output']
+    else:
+      session['fin_output'] = initial_input + '<br>' + output
     #var = text + test
-    var = str(result)
-    result = var
+    var = session['fin_output']
+    result = str(var)
     return render_template("input.html",result = result)
 
 #if __name__ == '__main__':
