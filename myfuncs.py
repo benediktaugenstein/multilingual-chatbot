@@ -63,7 +63,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   #prediction = 'hello'
   ##var = prediction
 
-  var_string_prep = output + '<br>' + initial_input + '<br>'
+  var_string_prep = str(output) + '<br>' + str(initial_input) + '<br>'
   var_string = str(var_string_prep)
   return var_string
   
