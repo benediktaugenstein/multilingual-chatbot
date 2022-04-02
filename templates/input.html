@@ -7,12 +7,15 @@
 
     <body>
       
-      <div style="overflow:auto; height:250px; width:500px; display:flex; flex-direction:column-reverse;">
-        <p>{{ result|safe }}</p>
+      <h2>Chatbot</h2>
+      
+      <div style="overflow:hidden; height:250px; width:500px; display:flex; flex-direction:column-reverse; border: 2px solid #e7dddd; border-radius:16px;">
+        <div style="overflow:auto;">
+          <p>{{ result|safe }}</p>
+        </div>
       </div>
              
       <form method="POST">
-        <h2>Chatbot</h2>
         <input name="text">
         <input type="submit">
       </form>
