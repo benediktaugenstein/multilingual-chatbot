@@ -7,6 +7,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from datetime import datetime, timezone, timedelta
 from sklearn.preprocessing import LabelBinarizer
 import pandas as pd
+from googletrans import Translator
 from myfuncs import *
 from flask import Flask, render_template, request, session
 
@@ -76,7 +77,12 @@ def output():
     result = test_var + processed_text
     """
     text = request.form['text']
+    translation = translator.translate(text, dest='en')
+    src = translation.src
+    text = translation.text
     result = new_input(text, tokenizers, lengths_input, models, ohe, ohe2)
+    translation2 = translator.translate(result, dest=src)
+    result = translation2.text
     if 'fin_output' in session:
       session['fin_output'] = session['fin_output'] + '<br></br>You: ' + text + '<br>' + 'Chatbot: ' + result
     else:
