@@ -83,7 +83,7 @@ def output():
     translation = translator.translate(text, dest='en')
     src = translation.src
     if src == 'en':
-      german = translator.translate(text, dest='de')
+      german = translator.translate(text, dest='es')
       translation = translator.translate(german.text, dest='en')
     text = translation.text
     result = new_input(text, tokenizers, lengths_input, models, ohe, ohe2)
