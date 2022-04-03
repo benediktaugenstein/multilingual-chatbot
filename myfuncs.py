@@ -41,7 +41,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
     now = datetime.now().utcnow()+timedelta(hours=1)
     time = now.strftime("%H:%M")
     date = now.strftime("%Y-%m-%d")
-    output = 'Currently, it is' + time + '\nThe date is: ' + date
+    output = 'Currently, it is' + time + '. The date is: ' + date + '.'
   elif var =='Feeling':
     inp_feel = tokenizers[1].texts_to_sequences(input_prep)
     inp_feel = pad_sequences(inp_feel, maxlen=lengths_input[1], padding='post', truncating='post')
