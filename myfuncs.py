@@ -76,7 +76,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
     if session['last_message'] == 'Feeling':
       output = 'I am sorry.'
     else:
-      output = 'All right.'
+      output = 'Okay.'
   elif var == 'Like':
     output = 'I am a robot without feelings. I do not really like anything, I am sorry.'
   
