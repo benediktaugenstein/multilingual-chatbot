@@ -54,7 +54,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
         prediction[0][i]=0
     prediction_inverse_transformed = ohe2.inverse_transform(prediction)
     var = prediction_inverse_transformed[0]
-    if max_pred <= 0.3:
+    if max_pred <= 0.28:
       output = 'Sorry, I did not understand that.'
     elif var == 'feel_HAL':
       output = 'Im good, how about you?'
