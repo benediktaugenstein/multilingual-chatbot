@@ -29,7 +29,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   prediction_inverse_transformed = ohe.inverse_transform(prediction)
   #print('Predicted category is: ', prediction_inverse_transformed[0])
   var = prediction_inverse_transformed[0]
-  if max_pred <= 0.3:
+  if max_pred <= 0.25:
     output = 'Sorry, I did not understand that.'
   elif  sum(inp[0]) == 0:
     output = 'Hello, my friend. Unfortunately, I did not really understand that.'
@@ -68,12 +68,12 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
     output = 'I am an artificial intelligence and my name is Ben. I do not have feelings. Basically, I am just statistics. My purpose is to talk to you. How may I help you?'
   elif var == 'Good':
     if session['last_message'] == 'Feeling':
-      ouput = 'That is nice.'
+      output = 'That is nice.'
     else:
       output = 'Okay.'
   elif var == 'Bad':
     if session['last_message'] == 'Feeling':
-      ouput = 'I am sorry.'
+      output = 'I am sorry.'
     else:
       output = 'All right.'
   elif var == 'Like':
