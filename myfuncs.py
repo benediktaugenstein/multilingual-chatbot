@@ -31,6 +31,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   var = prediction_inverse_transformed[0]
   if max_pred <= 0.25:
     output = 'Sorry, I did not understand that.'
+    var = ''
   elif  sum(inp[0]) == 0:
     output = 'Hello, my friend. Unfortunately, I did not really understand that.'
   elif var == 'Greeting':
