@@ -37,7 +37,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
     output = 'Hello there'
   elif var == 'Name':
     output = 'My name is Ben, and yours?'
-  elif var == 'Time':
+  elif var == 'Time' or var == 'Date':
     now = datetime.now().utcnow()+timedelta(hours=1)
     time = now.strftime("%H:%M")
     date = now.strftime("%Y-%m-%d")
@@ -53,19 +53,31 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
       else:
         prediction[0][i]=0
     prediction_inverse_transformed = ohe2.inverse_transform(prediction)
-    var = prediction_inverse_transformed[0]
+    var_feeling = prediction_inverse_transformed[0]
     if max_pred <= 0.28:
       output = 'Sorry, I did not understand that.'
-    elif var == 'feel_HAL':
+    elif var_feeling == 'feel_HAL':
       output = 'Im good, how about you?'
-    elif var == 'feel_person_good':
+    elif var_feeling == 'feel_person_good':
       output = 'I am happy that you are feeling well.'
-    elif var == 'feel_person_bad':
+    elif var_feeling == 'feel_person_bad':
       output = 'I am sorry to hear that.'
-    elif var == 'feel_person_question':
+    elif var_feeling == 'feel_person_question':
       output = 'I do not know. How do you feel?'
   elif var == 'Existence':
     output = 'I am an artificial intelligence and my name is Ben. I do not have feelings. Basically, I am just statistics. My purpose is to talk to you. How may I help you?'
+  elif var == 'Good':
+    if session['last_message'] = 'Feeling':
+      ouput = 'That is nice.'
+    else:
+      output = 'Okay.'
+  elif var == 'Bad':
+    if session['last_message'] = 'Feeling':
+      ouput = 'I am sorry.'
+    else:
+      output = 'All right.'
+  elif var == 'Like':
+    output = 'I am a robot without feelings. I do not really like anything, I am sorry.'
   
   #prediction = 'hello'
   ##var = prediction
