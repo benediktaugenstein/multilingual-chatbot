@@ -46,3 +46,26 @@ I do not feel fantastic,feel_person_bad
 I do not feel bad,feel_person_good
 I do not feel awful,feel_person_good
 I do not feel horrible,feel_person_good
+good,feel_person_good
+awesome,feel_person_good
+terrific,feel_person_good
+amazing,feel_person_good
+very good,feel_person_good
+not bad,feel_person_good
+okay,feel_person_good
+Im good,feel_person_good
+im awesome,feel_person_good
+im amazing,feel_person_good
+bad,feel_person_bad
+very bad,feel_person_bad
+horrible,feel_person_bad
+awful,feel_person_bad
+not good,feel_person_bad
+not awesome,feel_person_bad
+not really good,feel_person_bad
+like shit,feel_person_bad
+shitty,feel_person_bad
+i feel like shit,feel_person_bad
+How do i feel?,feel_person_question
+How am I feeling?,feel_person_question
+I dont know how i feel,feel_person_question
