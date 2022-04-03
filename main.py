@@ -52,6 +52,8 @@ for i, model in enumerate(models):
     ohe2 = LabelBinarizer()
     labels_transformed_feeling = ohe2.fit_transform(labels)
   #len_output = len(labels_transformed[0])
+  
+translator = Translator()
 
 app.secret_key='test'
 
