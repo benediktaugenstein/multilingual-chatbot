@@ -85,6 +85,8 @@ def output():
     result = new_input(text, tokenizers, lengths_input, models, ohe, ohe2)
     translation2 = translator.translate(result, dest=src)
     result = translation2.text
+    translation3 = translator.translate(text, dest=src)
+    text = translation3.text
     if 'fin_output' in session:
       session['fin_output'] = session['fin_output'] + '<br></br>You: ' + text + '<br>' + 'Chatbot: ' + result
     else:
