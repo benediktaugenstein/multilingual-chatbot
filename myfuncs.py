@@ -67,12 +67,12 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   elif var == 'Existence':
     output = 'I am an artificial intelligence and my name is Ben. I do not have feelings. Basically, I am just statistics. My purpose is to talk to you. How may I help you?'
   elif var == 'Good':
-    if session['last_message'] = 'Feeling':
+    if session['last_message'] == 'Feeling':
       ouput = 'That is nice.'
     else:
       output = 'Okay.'
   elif var == 'Bad':
-    if session['last_message'] = 'Feeling':
+    if session['last_message'] == 'Feeling':
       ouput = 'I am sorry.'
     else:
       output = 'All right.'
