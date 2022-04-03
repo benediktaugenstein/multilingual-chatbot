@@ -79,18 +79,19 @@ def output():
     result = test_var + processed_text
     """
     text = request.form['text']
+    initial_text = text
     translation = translator.translate(text, dest='en')
     src = translation.src
     text = translation.text
     result = new_input(text, tokenizers, lengths_input, models, ohe, ohe2)
     translation2 = translator.translate(result, dest=src)
     result = translation2.text
-    translation3 = translator.translate(text, dest=src)
-    text = translation3.text
+    #translation3 = translator.translate(text, dest=src)
+    #text = translation3.text
     if 'fin_output' in session:
-      session['fin_output'] = session['fin_output'] + '<br></br>You: ' + text + '<br>' + 'Chatbot: ' + result
+      session['fin_output'] = session['fin_output'] + '<br></br>You: ' + initial_text + '<br>' + 'Chatbot: ' + result
     else:
-      session['fin_output'] = '<br></br>You: ' + text + '<br>' + 'Chatbot: ' + result
+      session['fin_output'] = '<br></br>You: ' + initial_text + '<br>' + 'Chatbot: ' + result
     #var = text + test
     var = session['fin_output']
     #var = result
