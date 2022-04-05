@@ -84,8 +84,8 @@ def output():
     translation = translator.translate(text, dest='en', src=language)
     src = translation.src
     if src == 'en':
-      german = translator.translate(text, dest='es', src='en')
-      translation = translator.translate(german.text, dest='en', src='es')
+      german = translator.translate(text, dest='de', src='en')
+      translation = translator.translate(german.text, dest='en', src='de')
     text = translation.text
     result = new_input(text, tokenizers, lengths_input, models, ohe, ohe2)
     translation2 = translator.translate(result, dest=src, src='en')
