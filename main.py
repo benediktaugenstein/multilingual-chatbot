@@ -79,8 +79,9 @@ def output():
     result = test_var + processed_text
     """
     text = request.form['text']
+    language = request.form['language']
     initial_text = text
-    translation = translator.translate(text, dest='en')
+    translation = translator.translate(text, dest='en', src=language)
     src = translation.src
     if src == 'en':
       german = translator.translate(text, dest='es', src='en')
