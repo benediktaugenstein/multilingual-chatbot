@@ -54,7 +54,6 @@ for i, model in enumerate(models):
   #len_output = len(labels_transformed[0])
   
 translator = Translator()
-language=''
 
 app.secret_key='test'
 
