@@ -100,7 +100,7 @@ def output():
     var = session['fin_output']
     #var = result
     result = str(var)
-    return render_template("input.html",result = result)
+    return render_template("input.html",result = result, language=language)
 
 #if __name__ == '__main__':
     #app.run()
