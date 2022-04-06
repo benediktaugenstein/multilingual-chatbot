@@ -79,7 +79,11 @@ def output():
     result = test_var + processed_text
     """
     text = request.form['text']
+    
     language = request.form['language']
+    if text = '':
+      result = translator.translate('Please enter a message.', dest=language, src='en')
+      return render_template("input.html",result = result, language=language)
     initial_text = text
     if language=='':
       translation = translator.translate(text, dest='en')
