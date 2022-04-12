@@ -69,3 +69,12 @@ i feel like shit,feel_person_bad
 How do i feel?,feel_person_question
 How am I feeling?,feel_person_question
 I dont know how i feel,feel_person_question
+I feel well,feel_person_good
+i do feel well,feel_person_good
+well,feel_person_good
+i am feeling well,feel_person_good
+feeling well,feel_person_good
+not feeling well,feel_person_bad
+not well,feel_person_bad
+i am not feeling well,feel_person_bad
+i do not feel well,feel_person_bad
