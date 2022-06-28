@@ -58,7 +58,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
     if max_pred <= 0.28:
       output = 'Sorry, I did not understand that.'
     elif var_feeling == 'feel_HAL':
-      output = 'Im good, how about you?'
+      output = 'I am feeling good, how about you?'
     elif var_feeling == 'feel_person_good':
       output = 'I am happy that you are feeling well.'
     elif var_feeling == 'feel_person_bad':
