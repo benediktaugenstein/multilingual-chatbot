@@ -12,6 +12,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
     search = key + ' '
     if search in input_initial:
       input_initial = input_initial.replace(key, value)
+  input_initial = input_initial.replace("'", "")
   input_prep = [input_initial]
   inp = tokenizers[0].texts_to_sequences(input_prep)
   inp = pad_sequences(inp, maxlen=lengths_input[0], padding='post', truncating='post')
@@ -30,7 +31,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   #print('Predicted category is: ', prediction_inverse_transformed[0])
   var = prediction_inverse_transformed[0]
   if max_pred <= 0.28:
-    output = 'Sorry, I did not understand that.'
+    output = 'Sorry, I did not understand that!'
     var = ''
   elif  sum(inp[0]) == 0:
     output = 'Hello, my friend. Unfortunately, I did not really understand that.'
