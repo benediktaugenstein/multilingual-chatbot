@@ -4,4 +4,4 @@ tensorflow-cpu
 datetime
 scikit-learn
 pandas
-googletrans==3.0.0
+googletrans==4.0.0rc1
