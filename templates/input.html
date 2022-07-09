@@ -20,7 +20,6 @@
         <input type="submit">
         <br>
         <select class="" id="language" name="language">
-          <option value="">Recognize language</option>
           <option value="af" {% if language=='af' %} selected {% endif %}>Afrikaans</option>
           <option value="sq" {% if language=='sq' %} selected {% endif %}>Albanian</option>
           <option value="am" {% if language=='am' %} selected {% endif %}>Amharic</option>
@@ -42,7 +41,7 @@
           <option value="cs" {% if language=='cs' %} selected {% endif %}>Czech</option>
           <option value="da" {% if language=='da' %} selected {% endif %}>Danish</option>
           <option value="nl" {% if language=='nl' %} selected {% endif %}>Dutch</option>
-          <option value="en" {% if language=='en' %} selected {% endif %}>English</option>
+          <option value="en" {% if language=='en' or language=='' %} selected {% endif %}>English</option>
           <option value="eo" {% if language=='eo' %} selected {% endif %}>Esperanto</option>
           <option value="et" {% if language=='et' %} selected {% endif %}>Estonian</option>
           <option value="tl" {% if language=='tl' %} selected {% endif %}>Filipino</option>
