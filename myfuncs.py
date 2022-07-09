@@ -30,7 +30,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   prediction_inverse_transformed = ohe.inverse_transform(prediction)
   #print('Predicted category is: ', prediction_inverse_transformed[0])
   var = prediction_inverse_transformed[0]
-  if max_pred <= 0.28:
+  if max_pred <= 0.2:
     output = 'Sorry, I did not understand that!'
     var = ''
   elif  sum(inp[0]) == 0:
@@ -56,10 +56,10 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
         prediction[0][i]=0
     prediction_inverse_transformed = ohe2.inverse_transform(prediction)
     var_feeling = prediction_inverse_transformed[0]
-    if max_pred <= 0.28:
+    if max_pred <= 0.2:
       output = 'Sorry, I did not understand that.'
     elif var_feeling == 'feel_HAL':
-      output = 'I am feeling good, how about you?'
+      output = 'I am feeling good, how do you feel?'
     elif var_feeling == 'feel_person_good':
       output = 'I am happy that you are feeling well.'
     elif var_feeling == 'feel_person_bad':
