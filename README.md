@@ -1,9 +1,11 @@
 # multilingual-chatbot
 
 The chatbot can be accessed here:
+https://multilingual-chatbot.herokuapp.com/
 
+Currently, it is able to understand and respond to very simple sentences in over 100 languages. The language can either be chosen (works better) or set to be automatically recognized by the chatbot.
 
-Currently, it is able to understand and respond to very simple sentences in . These include:
+The chatbot is able to understand sentences in the following areas:
 
 - Greetings (e.g. hello, hey, ...)
 - Asking the chatbot how it feels (e.g. How are you?)
