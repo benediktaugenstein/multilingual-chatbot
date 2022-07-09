@@ -1,7 +1,3 @@
-def helper2(x):
-  x = x.upper() + 'lalala'
-  return x
-
 def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   from subs import sub
   from datetime import datetime, timezone, timedelta
@@ -38,7 +34,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
   elif var == 'Greeting':
     output = 'Hello there'
   elif var == 'Name':
-    output = 'My name is Ben, and yours?'
+    output = 'My name is David, and yours?'
   elif var == 'Time' or var == 'Date':
     now = datetime.now().utcnow()+timedelta(hours=1)
     time = now.strftime("%H:%M")
@@ -67,7 +63,7 @@ def new_input(input_initial, tokenizers, lengths_input, models, ohe, ohe2):
     elif var_feeling == 'feel_person_question':
       output = 'I do not know. How do you feel?'
   elif var == 'Existence':
-    output = 'I am an artificial intelligence and my name is Ben. I do not have feelings. Basically, I am just statistics. My purpose is to talk to you. How may I help you?'
+    output = 'I am an artificial intelligence and my name is David. I do not have feelings. Basically, I am just statistics. My purpose is to talk to you. How may I help you?'
   elif var == 'Good':
     if session['last_message'] == 'Feeling':
       output = 'That is nice.'
