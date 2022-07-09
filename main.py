@@ -61,7 +61,7 @@ test = 'test123'
 
 @app.route('/')
 def my_form():
-    return render_template('input.html')
+    return render_template('input.html', language='')
 
 @app.route('/', methods=['POST'])
 #@app.route('/')
